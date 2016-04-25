@@ -1,0 +1,158 @@
+\documentclass[11pt,a4j]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{slashbox}
+\usepackage{subfigure} 
+\usepackage{here}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{verbatim}
+%\usepackage{seqsplit}
+\usepackage{listings, jlisting}
+
+\lstset{
+    language=JAVA,%プログラミング言語によって変える。
+    basicstyle={\normalsize \ttfamily},
+%    keywordstyle={\color{OliveGreen}},
+    %[2][3]はプログラミング言語によってあったり、なかったり
+%    keywordstyle={[2]\color{colFunc}},
+%    keywordstyle={[3]\color{CadetBlue}},%
+%    commentstyle={\color{Brown}},
+%    %identifierstyle={\color{colID}},
+%    stringstyle=\color{blue},
+    tabsize=2,
+    frame=none,
+    numbers=none,
+    numberstyle={\ttfamily\small},
+    breaklines=true,%折り返し
+%    backgroundcolor={\color[gray]{.95}},
+    captionpos=b
+}
+
+\setlength{\textwidth}{170mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\oddsidemargin}{-5mm}
+
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+\begin{document}
+
+\begin{center}
+{\huge
+{ソースリストをTeXで作る}
+}
+
+\end{center}
+
+
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\tableofcontents
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+\section{ソースリストの作成ご苦労さまです}
+このPDFは, ソースリストの作成の手間をかなり削減させるために作りました.
+この方法を使うためまずTeX環境をPCにインストールしてください.\\
+
+\subsection{頭に入れてほしいこと3つ}
+ソースリストを作るということは, 時間に追われている頃だと思いますので,
+頭に入れてほしいことを三つだけを列挙します.
+\begin{itemize}
+\item 一つのプロジェクト毎に\verb|\|section\verb|{|Source\verb|.java}|する
+\item 一つの貼り付けるソースファイル毎に\verb|\|subsection\verb|{|Source\verb|.cpp}|
+\item 改ページのために\verb|\|subsection\verb|{|Source\verb|.xml}|毎に,\verb|\|newpage を挟む
+\end{itemize}
+
+だいたい, このPDFの元となったTeXを見ながらやればわかると思います.
+
+\subsection{まず目次の作り方}
+ソースリストを作るために,目次を作らなくてはいけません.TeXでは目次を自動で作ってくれます.\\
+そのために,TeXファイルの本文の方へ
+\begin{verbatim}
+\tableofcontents
+\end{verbatim}
+という命令を挿入します.こんな風に挿入してください.
+\begin{verbatim}
+\begin{document}
+    \thispagestyle{empty}
+    \tableofcontents
+
+    \thispagestyle{empty}
+    \newpage
+    \setcounter{page}{1}
+\end{document}
+\end{verbatim}
+
+おめでとうございます.これで章(section)や節(subsection)を使うたびに目次が追加されていくようになりました.
+次はソースファイルを参照する方法を見ていきましょう.
+
+\newpage
+
+\section{ソースリストを作る}
+\subsection{ソースコードをプロジェクトごとにまとめる.}
+ソースリストを作成しているTeXファイルと同じフォルダ階層に,プロジェクトごとにフォルダを作成し,それぞれにそのプロジェクトのソースコードを入れてください.
+今回は練習用に,「source\_1」と「source\_2」にそれぞれ「hello.c」と「hello.cpp」を作成しました.
+
+\subsection{ソースコードを引用する}
+ソースリストを作成しているTeXと同じフォルダに, 今から引用するソースたちが入っているフォルダがプロジェクトごとにあるかと思います.
+それらを引用するためには次のように命令文をTeXファイルに書き込みます.
+\begin{verbatim}
+\section{プロジェクト名}
+    \subsection{ソースコード名.拡張子}
+        \lstinputlisting{相対参照パス}
+        \newpage
+\end{verbatim}
+\verb|\|lstinputlistingの中に書くのは相対パスです.パスの概念を理解していればすぐにわかると思います.
+
+練習用に, 練習用に要したフォルダのファイルを引用する命令をここに示します.
+\begin{verbatim}
+\section{source-1}
+    \subsection{hello.c}
+        \lstinputlisting{./source_1/hello.c}
+        \newpage
+\end{verbatim}
+
+試しにここでhello.cを引用してみましょう.
+	\lstinputlisting{./source_1/hello.c}
+ソースファイルの引用ができていますね.\\
+次の章では練習用のソースフォルダ2つの中にあるソース2つを実際に引用してみましょう.
+
+\newpage
+
+\section{source-1}
+\subsection{hello.c}
+	\lstinputlisting{./source_1/hello.c}
+	\newpage
+	
+\section{source-2}
+\subsection{hello.cpp}
+	\lstinputlisting{./source_2/hello.cpp}
+	\newpage	
+	
+\section{本番はこれからです.}
+hello.cもhello.cppも引用されて貼付けされていましたね.このようにTeXを使えばWordでのコピペ地獄に悩まされずに済みます.
+
+WordとTeXのどちらが良いかはの判断は皆さんに任せます.これを読み終えたことで,みなさんはきっとソースリストを20分ほどで完成させる力が付いていると思います.
+
+それでは, 皆さんが出場するコンテストでの健闘を祈ります.お疲れ様でした.\\ \\ \\ \\
+
+\flushright
+平成28年4月25日 九期情報 与座章宙 作
+
+\newpage
+
+\section{このPDFのTeXソース}
+\subsection{MakeSourceList.tex}
+	\lstinputlisting{./MakeSourceList.tex}
+	\newpage	
+
+\end{document}

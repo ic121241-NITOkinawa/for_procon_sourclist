@@ -1,0 +1,725 @@
+\documentclass[11pt,a4j]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{slashbox}
+\usepackage{subfigure} 
+\usepackage{here}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{verbatim}
+
+\setlength{\textwidth}{170mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\oddsidemargin}{-5mm}
+
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+
+\begin{document}
+\vspace*{-20mm}
+{\Large
+
+\begin{flushleft}
+第2X回プログラミングコンテスト
+\end{flushleft}
+
+\vspace{-15mm}
+\begin{flushright}
+プログラムソースリスト
+\end{flushright}
+}
+
+\vspace{20mm}
+
+\begin{center}
+{\huge
+
+{自由部門 : 発表順番号(登録番号)  XX(20041)}
+
+\vspace{20mm}
+タイトル：「SwipeTalk」
+
+
+\vspace{20mm}
+学校名：沖縄工業高等専門学校\\
+
+\hspace{0mm}
+\vspace{0mm}
+
+\begin{tabular}{r l l}
+氏名：& 西原 & 希咲\\
+	 & 辺土名 & 朝飛 \\
+	 & 与座 & 章宙 \\
+	 & 當間 & 環 \\
+指導教員：& 正木 & 忠勝 \\
+\end{tabular}
+}
+
+\end{center}
+
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+
+
+\tableofcontents
+
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+
+
+
+\section{SwipeTalk}
+\subsection{DocumentActivity.java}
+	\verbatiminput{./srcSwipeTalk/DocumentActivity.java}
+	\newpage
+\subsection{HueAdapter.java}
+	\verbatiminput{./srcSwipeTalk/HueAdapter.java}
+	\newpage	
+\subsection{ImageCaptureActivity.java}
+	\verbatiminput{./srcSwipeTalk/ImageCaptureActivity.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeTalk/MainActivity.java}
+	\newpage
+\subsection{MessageActivity.java}
+	\verbatiminput{./srcSwipeTalk/MessageActivity.java}
+	\newpage
+\subsection{MultiSelectableGridView.java}
+	\verbatiminput{./srcSwipeTalk/MultiSelectableGridView.java}
+	\newpage
+\subsection{Phone\_PositionEstimation.java}
+	\verbatiminput{./srcSwipeTalk/Phone_PositionEstimation.java}
+	\newpage
+\subsection{PictureActivity.java}
+	\verbatiminput{./srcSwipeTalk/PictureActivity.java}
+	\newpage
+
+
+\subsection{activity\_document.xml}
+	\verbatiminput{./srcSwipeTalk/activity_document.xml}
+	\newpage
+\subsection{activity\_image\_capture.xml}
+	\verbatiminput{./srcSwipeTalk/activity_image_capture.xml}
+	\newpage
+\subsection{activity\_main.xml}
+	\verbatiminput{./srcSwipeTalk/activity_main.xml}
+	\newpage
+\subsection{activity\_message.xml}
+	\verbatiminput{./srcSwipeTalk/activity_message.xml}
+	\newpage
+\subsection{activity\_picture.xml}
+	\verbatiminput{./srcSwipeTalk/activity_picture.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeTalk/AndroidManifest.xml}
+	\newpage
+\subsection{list.xml}
+	\verbatiminput{./srcSwipeTalk/list.xml}
+	\newpage
+\subsection{selectable\_grid\_item.xml}
+	\verbatiminput{./srcSwipeTalk/selectable_grid_item.xml}
+	\newpage
+\subsection{titlebar.xml}
+	\verbatiminput{./srcSwipeTalk/titlebar.xml}
+	\newpage
+\subsection{titlebar02.xml}
+	\verbatiminput{./srcSwipeTalk/titlebar02.xml}
+	\newpage
+
+
+
+\section{SwipeTalkBase}
+\subsection{BeaconCalibration.java}
+	\verbatiminput{./srcSwipeTalkBase/BeaconCalibration.java}
+	\newpage
+\subsection{BLEFragment.java}
+	\verbatiminput{./srcSwipeTalkBase/BLEFragment.java}
+	\newpage
+\subsection{ConvertSendableFormat.java}
+	\verbatiminput{./srcSwipeTalkBase/ConvertSendableFormat.java}
+	\newpage
+\subsection{DeviceCoordinate.java}
+	\verbatiminput{./srcSwipeTalkBase/DeviceCoordinate.java}
+	\newpage
+\subsection{IBeaconAdvertiseCallback.java}
+	\verbatiminput{./srcSwipeTalkBase/IBeaconAdvertiseCallback.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeTalkBase/MainActivity.java}
+	\newpage
+\subsection{SetBeaconActivity.java}
+	\verbatiminput{./srcSwipeTalkBase/SetBeaconActivity.java}
+	\newpage
+
+
+
+\subsection{activity\_set\_beacon.xml}
+	\verbatiminput{./srcSwipeTalkBase/activity_set_beacon.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeTalkBase/AndroidManifest.xml}
+	\newpage
+
+
+\section{SwipeBomb}
+\subsection{CameraPreview.java}
+	\verbatiminput{./srcSwipeBomb/CameraPreview.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeBomb/MainActivity.java}
+	\newpage
+\subsection{mSoundEffect.java}
+	\verbatiminput{./srcSwipeBomb/mSoundEffect.java}
+	\newpage
+\subsection{aaaa}
+
+	\begin{verbatim}
+package com.ict.yzmock9_18;
+
+import android.hardware.Camera;
+import android.media.AudioManager;
+import android.media.Image;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
+import android.os.CountDownTimer;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends ActionBarActivity//implements Animation.AnimationListener
+{
+    //フリックの速度を格納する変数
+    public float x_total = 0;
+    public float y_total = 0;
+
+    //ゲーム開始のためのフラグ
+//    public boolean pinOff = false;
+    //手榴弾を持っているフラグ
+    public boolean grenadeHold = false;
+    //リザルト画面のフラグ
+    public boolean result = false;
+    //フリック回数を数える
+    public int flingCnt = 0;
+
+    //フリックアクションを取得するためクラスを宣言
+    private GestureDetector mGestureDetector;
+
+    //カウントダウンタイマーを一秒刻みの10秒間に設定
+    //するつもりだけど、ちょっとこいつ消しとく
+    //final MyCountDownTimer bombTimer = new MyCountDownTimer(10000, 1000);
+
+    //勝者の画面
+    public void gameWon(View v){
+        //リザルト画面フラグを立てる
+        result = true;
+
+        //リザルト画面にふさわしくない者共を非表示
+        //リザルト画面に必要な者共を表示
+        //xmlのビューを非表示にしてる
+        findViewById(R.id.bomb).setVisibility(View.GONE);
+        findViewById(R.id.num1).setVisibility(View.GONE);
+        findViewById(R.id.btnX).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt1).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt2).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt3).setVisibility(View.GONE);
+        findViewById(R.id.button).setVisibility(View.GONE);
+        findViewById(R.id.button2).setVisibility(View.GONE);
+        findViewById(R.id.button3).setVisibility(View.GONE);
+        findViewById(R.id.numCnt).setVisibility(View.GONE);
+        //xmlのビューを可視表示にしてる
+        findViewById(R.id.stringWon).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
+
+        //勝った時の音を再生
+        mSoundEffect.playWon();
+    }
+
+    //敗者人の画面
+    public void gameLose(View v) {
+        //リザルト画面フラグを立てる
+        result = true;
+
+        //リザルト画面にふさわしくない者共を非表示
+        //リザルト画面に必要な者共を表示
+        //xmlのビューを非表示化
+        findViewById(R.id.bomb).setVisibility(View.GONE);
+        findViewById(R.id.num1).setVisibility(View.GONE);
+        findViewById(R.id.btnX).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt1).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt2).setVisibility(View.GONE);
+        findViewById(R.id.btnCnt3).setVisibility(View.GONE);
+        findViewById(R.id.button).setVisibility(View.GONE);
+        findViewById(R.id.button2).setVisibility(View.GONE);
+        findViewById(R.id.button3).setVisibility(View.GONE);
+        findViewById(R.id.numCnt).setVisibility(View.GONE);
+        //xmlのビューを可視表示
+        findViewById(R.id.stringLose).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+        findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
+
+        //負けた時の音を再生
+        mSoundEffect.playLose();
+    }
+
+    //ゲーム終了時にRETRYを選択した時、最初の画面に戻る
+    public void retry(View v){
+        //ゲーム画面に遷移するので、フラグを折る
+        result = false;
+
+        ImageView img = (ImageView)findViewById(R.id.bomb);
+        img.setImageResource(R.drawable.grenade_pin);
+
+        //ゲーム画面を読み込む
+        //xmlのビュー非表示
+        findViewById(R.id.num1).setVisibility(View.GONE);
+        findViewById(R.id.num2).setVisibility(View.GONE);
+        findViewById(R.id.num3).setVisibility(View.GONE);
+        findViewById(R.id.stringLose).setVisibility(View.GONE);
+        findViewById(R.id.stringWon).setVisibility(View.GONE);
+        findViewById(R.id.imageView2).setVisibility(View.GONE);
+        findViewById(R.id.imageView3).setVisibility(View.GONE);
+        //xmlのビューを可視表示
+        findViewById(R.id.bomb).setVisibility(View.VISIBLE);
+        findViewById(R.id.btnX).setVisibility(View.VISIBLE);
+        findViewById(R.id.btnCnt1).setVisibility(View.VISIBLE);
+        findViewById(R.id.btnCnt2).setVisibility(View.VISIBLE);
+        findViewById(R.id.btnCnt3).setVisibility(View.VISIBLE);
+        findViewById(R.id.button).setVisibility(View.VISIBLE);
+        findViewById(R.id.button2).setVisibility(View.VISIBLE);
+        findViewById(R.id.button3).setVisibility(View.VISIBLE);
+        findViewById(R.id.numCnt).setVisibility(View.VISIBLE);
+    }
+
+    //ゲーム開始時に右上のバツをおした時アプリ終了
+    public void kill(View v){
+        //アプリの終了
+        MainActivity.this.finish();
+    }
+
+    //ゲーム終了画面でENDボタンをおした時アプリ終了
+    public void end(View v){
+        //アプリの終了
+        MainActivity.this.finish();
+    }
+
+    //残り時間3秒に達した時、数字を表示する関数。(ではあるが今はボタンクリックに反応させてる)
+    public void btnCnt1(View v){
+        //1を表示、2と3を非表示
+        findViewById(R.id.num1).setVisibility(View.VISIBLE);
+        findViewById(R.id.num2).setVisibility(View.GONE);
+        findViewById(R.id.num3).setVisibility(View.GONE);
+    }
+    public void btnCnt2(View v){
+        //2を表示、1と3を非表示
+        findViewById(R.id.num1).setVisibility(View.GONE);
+        findViewById(R.id.num2).setVisibility(View.VISIBLE);
+        findViewById(R.id.num3).setVisibility(View.GONE);
+    }
+    public void btnCnt3(View v){
+        //3を表示、1と2を非表示
+        findViewById(R.id.num1).setVisibility(View.GONE);
+        findViewById(R.id.num2).setVisibility(View.GONE);
+        findViewById(R.id.num3).setVisibility(View.VISIBLE);
+    }
+
+    //爆弾がきた時のアニメーションを設定
+    public void grenadeCome(View v){
+         //手榴弾を持っているフラグを立てる
+        grenadeHold = true;
+        
+        //手榴弾が落ちた音、カランカラン……みたいなのを再生
+        mSoundEffect.playCaught();
+
+        //imgにxmlにあるIDが「bomb」の画像のポインタを代入
+        ImageView img = (ImageView)findViewById(R.id.bomb);
+        //xmlにあるIDが「bomb」に、画像フォルダの「grenade_cought」の画像のポインタを代入
+        img.setImageResource(R.drawable.grenade_cought);//9/28加筆
+
+        //アニメーションのクラスをgrenadeComeに代入
+        Animation grenadeCome = AnimationUtils.loadAnimation(this, R.anim.anim_catch);
+        
+        //grenadeComeのアニメーションをimgに適用
+        img.startAnimation(grenadeCome);
+        //アニメーションが終わった時の見た目を画面に表示し続ける
+        grenadeCome.setFillBefore(true);
+        //バウンドさせる
+        grenadeCome.setInterpolator(this, R.anim.interpolator);
+    }
+
+    //フリックされた方向をうけとって、それによって爆弾をアニメーションさせる
+    public void bombThrow(double deg) {
+        //爆弾持っているフラグを折る
+        grenadeHold = false;
+
+        //プレイ画面なら投げた時の音を再生させて、リザルト画面なら無音を再生
+        if (!result) {
+//            sp.play(mSoundThrew, 1.0F, 1.0F, 0, 0, 1.0F);
+            mSoundEffect.playThrew();
+        }else{
+//            sp.play(mSoundSilent, 1.0F, 1.0F, 0, 0, 1.0F);
+            mSoundEffect.playSilent();
+        }
+        
+        //imgに、xmlにあるIDが「bomb」のポインタを代入
+        ImageView img = (ImageView)findViewById(R.id.bomb);
+        //キャッチして投げた時、爆弾の画像を斜めのままにするようにコメントアウト
+        //img.setImageResource(R.drawable.grenade_pin_less);//9/28加筆
+    
+        //リザルト画面フラグが立っていたら、爆弾の画像を透明にする.
+        if(result){
+            //imgBombに,xmlにあるIDが「bomb」のポインタを代入
+            //ImageView imgBomb = (ImageView)findViewById(R.id.bomb);
+            //imgBombの画像を、「alpha1dot」に代入
+            img.setImageResource(R.drawable.alpha1dot);
+        }
+
+
+        //リザルト画面では消す、プレイ画面なら再生させる
+        if (!result){
+            //スワイプの方向を8分割した方向、に入れるための変数
+            int swipeWay;
+
+            //アニメーションの定義
+            //trans0~7に、アニメーションをセット
+            //0左 1左上 2上 3右上 4右 5右下 6下 7左下 に飛んで行くアニメーション
+            Animation trans0 = AnimationUtils.loadAnimation(this, R.anim.anim_translate0);
+            Animation trans1 = AnimationUtils.loadAnimation(this, R.anim.anim_translate1);
+            Animation trans2 = AnimationUtils.loadAnimation(this, R.anim.anim_translate2);
+            Animation trans3 = AnimationUtils.loadAnimation(this, R.anim.anim_translate3);
+            Animation trans4 = AnimationUtils.loadAnimation(this, R.anim.anim_translate4);
+            Animation trans5 = AnimationUtils.loadAnimation(this, R.anim.anim_translate5);
+            Animation trans6 = AnimationUtils.loadAnimation(this, R.anim.anim_translate6);
+            Animation trans7 = AnimationUtils.loadAnimation(this, R.anim.anim_translate7);
+            //Animation grenadeCome = AnimationUtils.loadAnimation(this, R.anim.anim_catch);
+            //Animation cought = AnimationUtils.loadAnimation(this, R.anim.anim_catch);
+
+            //フリック方向の判定
+            /**swipeWayの数値とその方向(45度刻み)の対応
+             * 左向   0
+             * 左上   1
+             * 上     2
+             * 右上   3
+             * 右     4
+             * 右下   5
+             * 下     6
+             * 左下   7
+             * 例外   0
+            */
+            //角度が、-180~180度まで与えられるので
+            //それを8分割する
+            if (deg >= -22.5 && deg < 22.5) {
+                swipeWay = 0;
+            } else if (deg >= 22.5 && deg < 67.5) {
+                swipeWay = 1;
+            } else if (deg >= 67.5 && deg < 112.5) {
+                swipeWay = 2;
+            } else if (deg >= 112.5 && deg < 157.5) {
+                swipeWay = 3;
+            } else if (   deg >= 157.5 && deg <= 180
+                       || deg >= -180  && deg < -157.5){
+                swipeWay = 4;
+            } else if (deg >= -157.5 && deg < -112.5){
+                swipeWay = 5;
+            } else if (deg >= -112.5 && deg < -67.5){
+                swipeWay = 6;
+            } else if (deg >=  -67.5 && deg < -22.5){
+                swipeWay = 7;
+            }else{
+                //一応例外処理
+                swipeWay = 0;
+            }
+
+            //フリックされた方向によっていいアニメーションさせる
+            switch (swipeWay){
+                case 0:
+                    //imgにtrans0のアニメーションを適用
+                    img.startAnimation(trans0);
+                    break;
+                case 1:
+                    img.startAnimation(trans1);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 2:
+                    img.startAnimation(trans2);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 3:
+                    img.startAnimation(trans3);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 4:
+                    img.startAnimation(trans4);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 5:
+                    img.startAnimation(trans5);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 6:
+                    img.startAnimation(trans6);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                case 7:
+                    img.startAnimation(trans7);
+                    //imgにtrans0のアニメーションを適用
+                    break;
+                default:
+                    //一応、例外処理
+                    img.startAnimation(trans0);
+                    //imgにtrans0のアニメーションを適用
+            }
+            //飛んでいったあとは、非表示
+            img.setVisibility(View.GONE);
+        }
+    }
+
+    // 画面の背景をカメラからの画像を表示するために使う
+    private Camera mCam = null;
+    private CameraPreview mCamPreview = null;
+
+
+
+//    TextView timer = (TextView)findViewById(R.id.numCnt);
+    TextView timer;// = (ImageView)findViewById(R.id.bomb);
+
+    final MyCountDownTimer cdt = new MyCountDownTimer(10 * 1000, 1 * 1000);
+    public class MyCountDownTimer extends CountDownTimer{
+
+        public MyCountDownTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onFinish() {
+            // カウントダウン完了後に呼ばれる
+            if(grenadeHold){
+                //渡されるtxtCntに意味は無いが、引数にウィジェットを持たせないとダメ
+                //最後に手榴弾持っていたら、負けた人の画面
+                gameLose(timer);
+            }else{
+                //最後に手榴弾を持っていなかったら、勝者の画面
+                gameWon(timer);
+                timer.setText(Long.toString(millisInFuture / 1000));
+            }
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            // インターバル(countDownInterval)毎に呼ばれる
+//            timer.setText(Long.toString(millisUntilFinished/1000));
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        timer = (TextView)findViewById(R.id.numCnt);
+        
+        //activity_main.xmlを読み込んで画面に表示
+        setContentView(R.layout.activity_main);
+
+        // カメラインスタンスの取得
+        try {
+            mCam = Camera.open();
+            //取得する画像は横に向いているので、90度回転して描画する
+            mCam.setDisplayOrientation(90);
+        } catch (Exception e) {
+            // エラーを起こしたら、ゲーム終了(割りと危ない処理)
+            this.finish();
+        }
+
+        // FrameLayout に CameraPreview クラスを設定
+        //カメラの画像を取得する感じのやーつ
+        FrameLayout preview = (FrameLayout)findViewById(R.id.cameraPreview);
+        mCamPreview = new CameraPreview(this, mCam);
+        preview.addView(mCamPreview);
+        
+        //全画面化する関数.XMLで定義したのでいらないけど、メモまでに書いている
+        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        mGestureDetector = new GestureDetector(this, mOnGestureListener);
+
+        //カウントダウンタイマ
+/*        new CountDownTimer(10 * 1000, 1 * 1000){
+ *          //カウントダウンの数字を表示するためのもの
+ *          //txtCntにxmlにあるIDが「cumCnt」のポインタを入れる
+ *          TextView txtCnt = (TextView)findViewById(R.id.numCnt);
+ *
+ *          //1sのインターバルで呼ばれる
+ *          public void onTick(long millisUntilFinished){
+ *              //残り時間を秒単位で表示する
+ *              txtCnt.setText(Long.toString(millisUntilFinished/1000));
+ *          }
+ *          public void onFinish(){
+ *              //カウントダウン終了時、爆弾を持っていたら負けた人の画面
+ *              //爆弾を持っていなかったら勝ちの画面
+ *
+ *              if(grenadeHold){
+ *                  //渡されるtxtCntに意味は無いが、引数にウィジェットを持たせないとダメ
+ *                  //最後に手榴弾持っていたら、負けた人の画面
+ *                  gameLose(txtCnt);
+ *              }else{
+ *                  //最後に手榴弾を持っていなかったら、勝者の画面
+ *                  gameWon(txtCnt);
+ *                }
+ *            }
+ *        }.start();//onCreateにすぐStartを書いているので、アプリが起動したらカウントダウン開始
+ *                  //フリックを開始したらスタートに変えたい(10/1追記)
+ */
+
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        //あらかじめ、効果音データを読み込んでおく
+        new mSoundEffect(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        
+        //アプリ停止時には読み込んだ音楽データを開放する
+        mSoundEffect.setUnload();
+
+        // カメラ破棄インスタンスを解放
+        if (mCam != null) {
+            mCam.release();
+            mCam = null;
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    
+    //タップがあれば呼び出される
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        //画面が触られたら、
+        return mGestureDetector.onTouchEvent(event);
+    }
+
+    //フリックされたX方向とY方向の速度を取得する関数
+    private final GestureDetector.SimpleOnGestureListener mOnGestureListener = new GestureDetector.SimpleOnGestureListener(){
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY){
+            if (flingCnt++ == 0)
+            {
+                cdt.start();
+            }
+
+            float xxx = x_total - velocityX;
+            float yyy = y_total - velocityY;
+            x_total = xxx;
+            y_total = yyy;
+
+            //そしてアニメーションする関数にぶん投げる
+            //速度を取得して、そのベクトルを逆タンジェント関数に投げて角度にしてもらう
+            //角度はラジアンで取得されるので、60分法に変換してもらう
+            //正規の角度が貰えたら、その角度に応じてアニメーションする関数にぶん投げる
+            bombThrow(Math.toDegrees(Math.atan2((double)yyy, (double)xxx)));
+
+            x_total = 0;
+            y_total = 0;
+
+            return true;
+        }
+    };
+
+    //アプリ終了時に呼ばれる
+    @Override
+    protected void onDestroy(){
+        //アプリのメモリからの破棄あくして命令
+        super.onDestroy();
+    }
+}
+
+	\end{verbatim}
+
+\subsection{activity\_main.xml}
+	\verbatiminput{./srcSwipeBomb/activity_main.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeBomb/AndroidManifest.xml}
+	\newpage
+\subsection{anim\_alpha0.xml}
+	\verbatiminput{./srcSwipeBomb/anim_alpha0.xml}
+	\newpage
+\subsection{anim\_catch.xml}
+	\verbatiminput{./srcSwipeBomb/anim_catch.xml}
+	\newpage
+\subsection{anim\_translate0.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate0.xml}
+	\newpage
+\subsection{anim\_translate1.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate1.xml}
+	\newpage
+\subsection{anim\_translate2.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate2.xml}
+	\newpage
+\subsection{anim\_translate3.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate3.xml}
+	\newpage
+\subsection{anim\_translate4.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate4.xml}
+	\newpage
+\subsection{anim\_translate5.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate5.xml}
+	\newpage
+\subsection{anim\_translate6.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate6.xml}
+	\newpage
+\subsection{anim\_translate7.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate7.xml}
+	\newpage
+\subsection{interpolator.xml}
+	\verbatiminput{./srcSwipeBomb/interpolator.xml}
+	\newpage
+	
+
+
+
+
+\end{document}

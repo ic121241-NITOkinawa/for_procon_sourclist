@@ -1,0 +1,9 @@
+*.gz
+*.pdf
+*.aux
+*.dvi
+*.log
+*.toc
+*.xml
+YzMock*
+*.java

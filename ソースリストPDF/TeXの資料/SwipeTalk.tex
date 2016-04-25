@@ -1,0 +1,230 @@
+\documentclass[11pt,a4j]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{slashbox}
+\usepackage{subfigure} 
+\usepackage{here}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{verbatim}
+
+\setlength{\textwidth}{170mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\oddsidemargin}{-5mm}
+
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+
+\begin{document}
+\vspace*{-20mm}
+{\Large
+
+\begin{flushleft}
+第2X回プログラミングコンテスト
+\end{flushleft}
+
+\vspace{-15mm}
+\begin{flushright}
+プログラムソースリスト
+\end{flushright}
+}
+
+\vspace{20mm}
+
+\begin{center}
+{\huge
+
+{自由部門 : 発表順番号(登録番号)  XX(20041)}
+
+\vspace{20mm}
+タイトル：「SwipeTalk」
+
+
+\vspace{20mm}
+学校名：沖縄工業高等専門学校\\
+
+\hspace{0mm}
+\vspace{0mm}
+
+\begin{tabular}{r l l}
+氏名：& 西原 & 希咲\\
+	 & 辺土名 & 朝飛 \\
+	 & 与座 & 章宙 \\
+	 & 當間 & 環 \\
+指導教員：& 正木 & 忠勝 \\
+\end{tabular}
+}
+
+\end{center}
+
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+
+
+\tableofcontents
+
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+
+
+
+\section{SwipeTalk}
+\subsection{DocumentActivity.java}
+	\verbatiminput{./srcSwipeTalk/DocumentActivity.java}
+	\newpage
+\subsection{HueAdapter.java}
+	\verbatiminput{./srcSwipeTalk/HueAdapter.java}
+	\newpage	
+\subsection{ImageCaptureActivity.java}
+	\verbatiminput{./srcSwipeTalk/ImageCaptureActivity.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeTalk/MainActivity.java}
+	\newpage
+\subsection{MessageActivity.java}
+	\verbatiminput{./srcSwipeTalk/MessageActivity.java}
+	\newpage
+\subsection{MultiSelectableGridView.java}
+	\verbatiminput{./srcSwipeTalk/MultiSelectableGridView.java}
+	\newpage
+\subsection{Phone\_PositionEstimation.java}
+	\verbatiminput{./srcSwipeTalk/Phone_PositionEstimation.java}
+	\newpage
+\subsection{PictureActivity.java}
+	\verbatiminput{./srcSwipeTalk/PictureActivity.java}
+	\newpage
+
+
+\subsection{activity\_document.xml}
+	\verbatiminput{./srcSwipeTalk/activity_document.xml}
+	\newpage
+\subsection{activity\_image\_capture.xml}
+	\verbatiminput{./srcSwipeTalk/activity_image_capture.xml}
+	\newpage
+\subsection{activity\_main.xml}
+	\verbatiminput{./srcSwipeTalk/activity_main.xml}
+	\newpage
+\subsection{activity\_message.xml}
+	\verbatiminput{./srcSwipeTalk/activity_message.xml}
+	\newpage
+\subsection{activity\_picture.xml}
+	\verbatiminput{./srcSwipeTalk/activity_picture.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeTalk/AndroidManifest.xml}
+	\newpage
+\subsection{list.xml}
+	\verbatiminput{./srcSwipeTalk/list.xml}
+	\newpage
+\subsection{selectable\_grid\_item.xml}
+	\verbatiminput{./srcSwipeTalk/selectable_grid_item.xml}
+	\newpage
+\subsection{titlebar.xml}
+	\verbatiminput{./srcSwipeTalk/titlebar.xml}
+	\newpage
+\subsection{titlebar02.xml}
+	\verbatiminput{./srcSwipeTalk/titlebar02.xml}
+	\newpage
+
+
+
+\section{SwipeTalkBase}
+\subsection{BeaconCalibration.java}
+	\verbatiminput{./srcSwipeTalkBase/BeaconCalibration.java}
+	\newpage
+\subsection{BLEFragment.java}
+	\verbatiminput{./srcSwipeTalkBase/BLEFragment.java}
+	\newpage
+\subsection{ConvertSendableFormat.java}
+	\verbatiminput{./srcSwipeTalkBase/ConvertSendableFormat.java}
+	\newpage
+\subsection{DeviceCoordinate.java}
+	\verbatiminput{./srcSwipeTalkBase/DeviceCoordinate.java}
+	\newpage
+\subsection{IBeaconAdvertiseCallback.java}
+	\verbatiminput{./srcSwipeTalkBase/IBeaconAdvertiseCallback.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeTalkBase/MainActivity.java}
+	\newpage
+\subsection{SetBeaconActivity.java}
+	\verbatiminput{./srcSwipeTalkBase/SetBeaconActivity.java}
+	\newpage
+
+
+
+\subsection{activity\_set\_beacon.xml}
+	\verbatiminput{./srcSwipeTalkBase/activity_set_beacon.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeTalkBase/AndroidManifest.xml}
+	\newpage
+
+
+\section{SwipeBomb}
+\subsection{CameraPreview.java}
+	\verbatiminput{./srcSwipeBomb/CameraPreview.java}
+	\newpage
+\subsection{MainActivity.java}
+	\verbatiminput{./srcSwipeBomb/MainActivity.java}
+	\newpage
+\subsection{mSoundEffect.java}
+	\verbatiminput{./srcSwipeBomb/mSoundEffect.java}
+	\newpage
+
+
+\subsection{activity\_main.xml}
+	\verbatiminput{./srcSwipeBomb/activity_main.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\verbatiminput{./srcSwipeBomb/AndroidManifest.xml}
+	\newpage
+\subsection{anim\_alpha0.xml}
+	\verbatiminput{./srcSwipeBomb/anim_alpha0.xml}
+	\newpage
+\subsection{anim\_catch.xml}
+	\verbatiminput{./srcSwipeBomb/anim_catch.xml}
+	\newpage
+\subsection{anim\_translate0.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate0.xml}
+	\newpage
+\subsection{anim\_translate1.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate1.xml}
+	\newpage
+\subsection{anim\_translate2.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate2.xml}
+	\newpage
+\subsection{anim\_translate3.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate3.xml}
+	\newpage
+\subsection{anim\_translate4.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate4.xml}
+	\newpage
+\subsection{anim\_translate5.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate5.xml}
+	\newpage
+\subsection{anim\_translate6.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate6.xml}
+	\newpage
+\subsection{anim\_translate7.xml}
+	\verbatiminput{./srcSwipeBomb/anim_translate7.xml}
+	\newpage
+\subsection{interpolator.xml}
+	\verbatiminput{./srcSwipeBomb/interpolator.xml}
+	\newpage
+	
+
+
+
+
+\end{document}

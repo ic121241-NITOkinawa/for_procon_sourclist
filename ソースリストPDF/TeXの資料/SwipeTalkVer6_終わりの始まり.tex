@@ -1,0 +1,281 @@
+\documentclass[11pt,a4j]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{asmac}
+\usepackage{slashbox}
+\usepackage{subfigure} 
+\usepackage{here}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{verbatim}
+%\usepackage{seqsplit}
+\usepackage{listings, jlisting}
+
+\lstset{
+    language=JAVA,%プログラミング言語によって変える。
+    basicstyle={\normalsize \ttfamily},
+%    keywordstyle={\color{OliveGreen}},
+    %[2][3]はプログラミング言語によってあったり、なかったり
+%    keywordstyle={[2]\color{colFunc}},
+%    keywordstyle={[3]\color{CadetBlue}},%
+%    commentstyle={\color{Brown}},
+%    %identifierstyle={\color{colID}},
+%    stringstyle=\color{blue},
+    tabsize=2,
+    frame=none,
+    numbers=none,
+    numberstyle={\ttfamily\small},
+    breaklines=true,%折り返し
+%    backgroundcolor={\color[gray]{.95}},
+    captionpos=b
+}
+
+\setlength{\textwidth}{170mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\oddsidemargin}{-5mm}
+
+
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+\begin{document}
+\vspace*{-20mm}
+{\Large
+
+\begin{flushleft}
+第26回プログラミングコンテスト
+\end{flushleft}
+
+\vspace{-15mm}
+\begin{flushright}
+プログラムソースリスト
+\end{flushright}
+}
+
+\vspace{20mm}
+
+\begin{center}
+{\huge
+
+{自由部門 : 発表順番号(登録番号)  4(20041)}
+
+\vspace{20mm}
+タイトル：「SwipeTalk」
+
+
+\vspace{20mm}
+学校名：沖縄工業高等専門学校\\
+
+\hspace{0mm}
+\vspace{0mm}
+
+\begin{tabular}{r l l}
+氏名：& 西原 & 希咲\\
+	 & 辺土名 & 朝飛 \\
+	 & 与座 & 章宙 \\
+	 & 當間 & 環 \\
+指導教員：& 正木 & 忠勝 \\
+\end{tabular}
+}
+
+\end{center}
+
+
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\tableofcontents
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+\section{ソースリストの作成ご苦労さまです}
+このPDFは, ソースリストの作成の手間をかなり削減させるために作りました.
+この方法を使うためまずTeX環境をPCにインストールしてください.\\
+
+\subsection{頭に入れてほしいこと3つ}
+ソースリストを作るということは, 時間に追われている頃だと思いますので,
+頭に入れてほしいことを三つだけを列挙します.
+\begin{itemize}
+\item 一つのプロジェクト毎に\verb|\|section\verb|{|Source\verb|.java}|する
+\item 一つの貼り付けるソースファイル毎に\verb|\|subsection\verb|{|Source\verb|.cpp}|
+\item 改ページのために\verb|\|subsection\verb|{|Source\verb|.xml}|毎に,\verb|\|newpage を挟む
+\end{itemize}
+
+だいたい, このPDFの元となったTeXを見ながらやればわかると思います.
+
+\subsection{まず目次の作り方}
+ソースリストを作るために,目次を作らなくてはいけません.TeXでは目次を自動で作ってくれます.\\
+そのために,
+\begin{verbatim}
+\tableofcontents
+\end{verbatim}
+という命令を挿入します.こんな風に挿入してください.
+\begin{verbatim}
+\begin{document}
+\thispagestyle{empty}
+\tableofcontents
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\end{document}
+\end{verbatim}
+
+おめでとうございます.これで章(section)や節(subsection)を使うたびに目次が追加されていくようになりました.
+次はソースファイルを参照する方法を見ていきましょう.
+
+\newpage
+
+\section{ソースコードをプロジェクトごとにまとめる.}
+
+
+\section{SwipeTalk}
+\subsection{DocumentActivity.java}
+	\lstinputlisting{./srcSwipeTalk/DocumentActivity.java}
+	\newpage
+\subsection{HueAdapter.java}
+	\lstinputlisting{./srcSwipeTalk/HueAdapter.java}
+	\newpage	
+\subsection{ImageCaptureActivity.java}
+	\lstinputlisting{./srcSwipeTalk/ImageCaptureActivity.java}
+	\newpage
+\subsection{MainActivity.java}
+	\lstinputlisting{./srcSwipeTalk/MainActivity.java}
+	\newpage
+\subsection{MessageActivity.java}
+	\lstinputlisting{./srcSwipeTalk/MessageActivity.java}
+	\newpage
+\subsection{MultiSelectableGridView.java}
+	\lstinputlisting{./srcSwipeTalk/MultiSelectableGridView.java}
+	\newpage
+\subsection{Phone\_PositionEstimation.java}
+	\lstinputlisting{./srcSwipeTalk/Phone_PositionEstimation.java}
+	\newpage
+\subsection{PictureActivity.java}
+	\lstinputlisting{./srcSwipeTalk/PictureActivity.java}
+	\newpage
+
+\subsection{activity\_document.xml}
+	\lstinputlisting{./srcSwipeTalk/activity_document.xml}
+	\newpage
+\subsection{activity\_image\_capture.xml}
+	\lstinputlisting{./srcSwipeTalk/activity_image_capture.xml}
+	\newpage
+\subsection{activity\_main.xml}
+	\lstinputlisting{./srcSwipeTalk/activity_main.xml}
+	\newpage
+\subsection{activity\_message.xml}
+	\lstinputlisting{./srcSwipeTalk/activity_message.xml}
+	\newpage
+\subsection{activity\_picture.xml}
+	\lstinputlisting{./srcSwipeTalk/activity_picture.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\lstinputlisting{./srcSwipeTalk/AndroidManifest.xml}
+	\newpage
+\subsection{list.xml}
+	\lstinputlisting{./srcSwipeTalk/list.xml}
+	\newpage
+\subsection{selectable\_grid\_item.xml}
+	\lstinputlisting{./srcSwipeTalk/selectable_grid_item.xml}
+	\newpage
+\subsection{titlebar.xml}
+	\lstinputlisting{./srcSwipeTalk/titlebar.xml}
+	\newpage
+\subsection{titlebar02.xml}
+	\lstinputlisting{./srcSwipeTalk/titlebar02.xml}
+	\newpage
+
+
+
+\section{SwipeTalkBase}
+\subsection{BeaconCalibration.java}
+	\lstinputlisting{./srcSwipeTalkBase/BeaconCalibration.java}
+	\newpage
+\subsection{BLEFragment.java}
+	\lstinputlisting{./srcSwipeTalkBase/BLEFragment.java}
+	\newpage
+\subsection{ConvertSendableFormat.java}
+	\lstinputlisting{./srcSwipeTalkBase/ConvertSendableFormat.java}
+	\newpage
+\subsection{DeviceCoordinate.java}
+	\lstinputlisting{./srcSwipeTalkBase/DeviceCoordinate.java}
+	\newpage
+\subsection{IBeaconAdvertiseCallback.java}
+	\lstinputlisting{./srcSwipeTalkBase/IBeaconAdvertiseCallback.java}
+	\newpage
+\subsection{MainActivity.java}
+	\lstinputlisting{./srcSwipeTalkBase/MainActivity.java}
+	\newpage
+\subsection{SetBeaconActivity.java}
+	\lstinputlisting{./srcSwipeTalkBase/SetBeaconActivity.java}
+	\newpage
+
+
+\subsection{activity\_set\_beacon.xml}
+	\lstinputlisting{./srcSwipeTalkBase/activity_set_beacon.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\lstinputlisting{./srcSwipeTalkBase/AndroidManifest.xml}
+	\newpage
+
+
+
+\section{SwipeBomb}
+\subsection{CameraPreview.java}
+	\lstinputlisting{./srcSwipeBomb/CameraPreview.java}
+	\newpage
+\subsection{MainActivity.java}
+	\lstinputlisting{./srcSwipeBomb/MainActivity.java}
+	\newpage
+\subsection{mSoundEffect.java}
+	\lstinputlisting{./srcSwipeBomb/mSoundEffect.java}
+	\newpage
+
+\subsection{activity\_main.xml}
+	\lstinputlisting{./srcSwipeBomb/activity_main.xml}
+	\newpage
+\subsection{AndroidManifest.xml}
+	\lstinputlisting{./srcSwipeBomb/AndroidManifest.xml}
+	\newpage
+\subsection{anim\_alpha0.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_alpha0.xml}
+	\newpage
+\subsection{anim\_catch.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_catch.xml}
+	\newpage
+\subsection{anim\_translate0.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate0.xml}
+	\newpage
+\subsection{anim\_translate1.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate1.xml}
+	\newpage
+\subsection{anim\_translate2.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate2.xml}
+	\newpage
+\subsection{anim\_translate3.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate3.xml}
+	\newpage
+\subsection{anim\_translate4.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate4.xml}
+	\newpage
+\subsection{anim\_translate5.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate5.xml}
+	\newpage
+\subsection{anim\_translate6.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate6.xml}
+	\newpage
+\subsection{anim\_translate7.xml}
+	\lstinputlisting{./srcSwipeBomb/anim_translate7.xml}
+	\newpage
+\subsection{interpolator.xml}
+	\lstinputlisting{./srcSwipeBomb/interpolator.xml}
+	\newpage
+	
+
+\end{document}
